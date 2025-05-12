@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
-#include <cstdlib> // Para NULL
+#include <cstdlib>
 
 using namespace std;
 
-// Estrutura do funcionário
+// Estrutura do funcionÃ¡rio
 struct Funcionario {
     int prontuario;
     string nome;
@@ -12,7 +12,6 @@ struct Funcionario {
     Funcionario* prox;
 };
 
-// Função para inserir novo funcionário
 Funcionario* incluir(Funcionario* lista) {
     Funcionario* novo = new Funcionario();
 
@@ -42,7 +41,6 @@ Funcionario* incluir(Funcionario* lista) {
     return novo;
 }
 
-// Função para excluir funcionário
 Funcionario* excluir(Funcionario* lista) {
     int pront;
     cout << "Digite o prontuario a excluir: ";
@@ -72,7 +70,6 @@ Funcionario* excluir(Funcionario* lista) {
     return lista;
 }
 
-// Função para pesquisar funcionário
 void pesquisar(Funcionario* lista) {
     int pront;
     cout << "Digite o prontuario a pesquisar: ";
@@ -91,7 +88,6 @@ void pesquisar(Funcionario* lista) {
     cout << "Funcionario nao encontrado!" << endl;
 }
 
-// Função para listar todos os funcionários
 void listar(Funcionario* lista) {
     Funcionario* aux = lista;
     double totalSalarios = 0.0;
@@ -114,7 +110,6 @@ void listar(Funcionario* lista) {
     cout << "Total de salarios: R$ " << totalSalarios << endl;
 }
 
-// Função para liberar memória ao final
 void liberar(Funcionario* lista) {
     Funcionario* aux;
     while (lista != NULL) {
